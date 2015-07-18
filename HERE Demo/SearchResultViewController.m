@@ -77,6 +77,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    self.searchTerm = textField.text;
     [self issueSearchRequestFor:textField.text];
     return YES;
 }
