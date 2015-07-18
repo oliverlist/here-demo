@@ -187,6 +187,7 @@ static NSString *kItinerayFileName = @"itinerary";
         self.doneButton.alpha = 1;
     }];
 
+    self.searchField.delegate = searchResultViewController;
     [self.searchField addTarget:searchResultViewController action:@selector(searchFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     searchResultViewController.delegate = self;
     [self addChildViewController:searchResultViewController];
@@ -200,12 +201,13 @@ static NSString *kItinerayFileName = @"itinerary";
         return;
     }
     [searchResultViewController removeFromParentViewController];
+    [self.searchField removeTarget:searchResultViewController action:@selector(searchFieldChanged:) forControlEvents:UIControlEventEditingChanged];
+    self.searchField.delegate = nil;
     [UIView animateWithDuration:0.3 animations:^{
         searchResultViewController.view.alpha = 0;
         self.doneButton.alpha = 0;
     }                completion:^(BOOL finished) {
         [searchResultViewController.view removeFromSuperview];
-        [self.searchField removeTarget:searchResultViewController action:@selector(searchFieldChanged:) forControlEvents:UIControlEventEditingChanged];
         self.doneButton.hidden = YES;
     }];
 }

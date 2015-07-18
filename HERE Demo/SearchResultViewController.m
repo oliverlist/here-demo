@@ -40,11 +40,13 @@
 {
     [super viewDidLoad];
     self.searchResults = [[NSMutableArray alloc] init];
+    [self registerForKeyboardNotifications];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self unregisterFromKeyboardNotifications];
     self.searchTerm = nil;
 }
 
@@ -71,6 +73,14 @@
     [self.delegate didSelectLocation:self.searchResults[(NSUInteger) indexPath.row]];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self issueSearchRequestFor:textField.text];
+    return YES;
+}
+
 #pragma mark - Private
 
 - (void)issueSearchRequestFor:(NSString *)searchTerm
@@ -90,6 +100,39 @@
         [strongSelf.searchResults addObjectsFromArray:searchResults];
         [strongSelf.resultsTable reloadData];
     }];
+}
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+            selector:@selector(keyboardWasShown:)
+            name:UIKeyboardDidShowNotification object:nil];
+
+
+   [[NSNotificationCenter defaultCenter] addObserver:self
+             selector:@selector(keyboardWillBeHidden:)
+             name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)unregisterFromKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[notification userInfo][UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+
+    self.resultsTable.contentInset = contentInsets;
+    self.resultsTable.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.resultsTable.contentInset = contentInsets;
+    self.resultsTable.scrollIndicatorInsets = contentInsets;
 }
 
 @end

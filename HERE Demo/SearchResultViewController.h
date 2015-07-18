@@ -9,7 +9,7 @@
 
 @end
 
-@interface SearchResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SearchResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property(nonatomic, weak) IBOutlet UITableView *resultsTable;
 @property(nonatomic, weak) id <LocationSelectionDelegate> delegate;
