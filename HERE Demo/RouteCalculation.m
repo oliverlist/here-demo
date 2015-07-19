@@ -34,7 +34,7 @@
     NSMutableArray *queryItems = [[NSMutableArray alloc] init];
     [itinerary.locations enumerateObjectsUsingBlock:^(Location *location, NSUInteger idx, BOOL *stop) {
         NSString *key = [NSString stringWithFormat:@"waypoint%lu", (unsigned long) idx];
-        NSURLQueryItem *waypoint = [NSURLQueryItem queryItemWithName:key value:[NSString stringWithFormat:@"geo!%.2f,%.2f", location.latitude, location.longitude]];
+        NSURLQueryItem *waypoint = [NSURLQueryItem queryItemWithName:key value:[NSString stringWithFormat:@"geo!%.5f,%.5f", location.latitude, location.longitude]];
         [queryItems addObject:waypoint];
     }];
     NSString *modeString;
@@ -49,7 +49,7 @@
             break;
     }
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"mode" value:modeString]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"resolution" value:@"50"]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"resolution" value:@"250:100"]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"representation" value:@"display"]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"routeAttributes" value:@"summary,shape"]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"app_id" value:APP_ID]];
