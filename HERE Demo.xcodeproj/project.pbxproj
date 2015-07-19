@@ -21,8 +21,19 @@
 		29043C80FCCB5A431BCCC112 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29043B95BB5EAD54DBD80B7C /* MapViewController.m */; };
 		29043DFC7C49AF78FD65C2C7 /* LocationSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 29043B3C6DD7A37C0AD894C8 /* LocationSearch.m */; };
 		29043EB23CC39F97B0E79F40 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29043FD46CE03810804AC923 /* MainViewController.m */; };
+		559244491B5BF60E00FCDA24 /* ItineraryEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 559244481B5BF60E00FCDA24 /* ItineraryEditorTests.m */; };
 		9E1C13B8DFA926FC4C101B39 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E723E8685E8803D87529E89D /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5592444A1B5BF60E00FCDA24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 290435644C7A2B68C8A71F27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29043829C583DEA42E345DDC;
+			remoteInfo = "HERE Demo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		290430C9FAA75E93FF83E119 /* ItineraryDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItineraryDisplay.h; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		29043E562060A856C586CF26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		29043FD46CE03810804AC923 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		29043FE8E7C6B830BC5D1495 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		559244441B5BF60E00FCDA24 /* HERE Demo Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HERE Demo Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		559244471B5BF60E00FCDA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559244481B5BF60E00FCDA24 /* ItineraryEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItineraryEditorTests.m; sourceTree = "<group>"; };
 		9465662F3A0AC6397D060A8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E719D8AF4FD3D0B2FB5A0EF9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E723E8685E8803D87529E89D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559244411B5BF60E00FCDA24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				290437581A755A18715EA37C /* HERE Demo.app */,
+				559244441B5BF60E00FCDA24 /* HERE Demo Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +150,7 @@
 		29043B93E0BA640DBE2534E5 = {
 			isa = PBXGroup;
 			children = (
+				559244451B5BF60E00FCDA24 /* HERE Demo Tests */,
 				290434B47E666B941975D271 /* Products */,
 				29043CD80FDAEBCF8A24FB8C /* HERE Demo */,
 				E33F781BFAC28673B925BD90 /* Pods */,
@@ -158,6 +181,23 @@
 				E723E8685E8803D87529E89D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		559244451B5BF60E00FCDA24 /* HERE Demo Tests */ = {
+			isa = PBXGroup;
+			children = (
+				559244481B5BF60E00FCDA24 /* ItineraryEditorTests.m */,
+				559244461B5BF60E00FCDA24 /* Supporting Files */,
+			);
+			path = "HERE Demo Tests";
+			sourceTree = "<group>";
+		};
+		559244461B5BF60E00FCDA24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				559244471B5BF60E00FCDA24 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E33F781BFAC28673B925BD90 /* Pods */ = {
@@ -191,6 +231,24 @@
 			productReference = 290437581A755A18715EA37C /* HERE Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		559244431B5BF60E00FCDA24 /* HERE Demo Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5592444E1B5BF60E00FCDA24 /* Build configuration list for PBXNativeTarget "HERE Demo Tests" */;
+			buildPhases = (
+				559244401B5BF60E00FCDA24 /* Sources */,
+				559244411B5BF60E00FCDA24 /* Frameworks */,
+				559244421B5BF60E00FCDA24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5592444B1B5BF60E00FCDA24 /* PBXTargetDependency */,
+			);
+			name = "HERE Demo Tests";
+			productName = "HERE Demo Tests";
+			productReference = 559244441B5BF60E00FCDA24 /* HERE Demo Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +256,12 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "Oliver List";
+				TargetAttributes = {
+					559244431B5BF60E00FCDA24 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 29043829C583DEA42E345DDC;
+					};
+				};
 			};
 			buildConfigurationList = 2904372DAB3D0B929F52DFD8 /* Build configuration list for PBXProject "HERE Demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -212,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				29043829C583DEA42E345DDC /* HERE Demo */,
+				559244431B5BF60E00FCDA24 /* HERE Demo Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +289,13 @@
 				290430FAE134134ADA120E2E /* Images.xcassets in Resources */,
 				290437A19185197426730E33 /* LaunchScreen.xib in Resources */,
 				290439D208AEA29187356160 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		559244421B5BF60E00FCDA24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +353,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559244401B5BF60E00FCDA24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559244491B5BF60E00FCDA24 /* ItineraryEditorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5592444B1B5BF60E00FCDA24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29043829C583DEA42E345DDC /* HERE Demo */;
+			targetProxy = 5592444A1B5BF60E00FCDA24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		29043815109B2DA0AC618866 /* LaunchScreen.xib */ = {
@@ -409,6 +497,40 @@
 			};
 			name = Release;
 		};
+		5592444C1B5BF60E00FCDA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HERE Demo Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HERE Demo.app/HERE Demo";
+			};
+			name = Debug;
+		};
+		5592444D1B5BF60E00FCDA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HERE Demo Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HERE Demo.app/HERE Demo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +551,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5592444E1B5BF60E00FCDA24 /* Build configuration list for PBXNativeTarget "HERE Demo Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5592444C1B5BF60E00FCDA24 /* Debug */,
+				5592444D1B5BF60E00FCDA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

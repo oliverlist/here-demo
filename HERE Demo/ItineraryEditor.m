@@ -59,7 +59,7 @@
     NSMutableArray *locations = [self.itinerary.locations mutableCopy];
     Itinerary *toBeMoved = locations[from];
     [locations removeObjectAtIndex:from];
-    [locations insertObject:toBeMoved atIndex:from < to ? to - 1 : to];
+    [locations insertObject:toBeMoved atIndex:to];
     self.itinerary.locations = [locations copy];
     self.itinerary.route = nil;
     self.itinerary.image = nil;
